@@ -170,19 +170,19 @@ function h(val) {if (val == null) return height;return height * val;}
 const depData = {
 	externalAssetDependencies: [
 	  {
-    // cid: "QmXZAMSbkVg2mBLaFBSz7JU8KVbdP61kiBJuBczFuhWjES",
+    cid: "QmXZAMSbkVg2mBLaFBSz7JU8KVbdP61kiBJuBczFuhWjES",
     // new filebase CiD
     // cid: "QmcLyeGKHwTESLeHK8PtynsiMK4ySbovXF67vHwtd4XAXa",
     // updated filebase cid:
     // cid: "QmW6iLdCHEeJcidjjfKyfo6KYaMiHYK2TxBQAj5TBs3NxA",
     // updated filebase cid 9/12/2024:
-    cid: "bafybeiesua62ncqyb65gjm2kgna4xcrrr7sdufcdejyentytdky2k2q4q4",
+    // cid: "bafybeiesua62ncqyb65gjm2kgna4xcrrr7sdufcdejyentytdky2k2q4q4",
 	
 		dependency_type: "ipfs"
 	  },
 	],
-  // preferredIPFSGateway:"https://black-indirect-dragon-602.mypinata.cloud"
-  preferredIPFSGateway:"https://homage2024.myfilebase.com"
+  preferredIPFSGateway:"https://black-indirect-dragon-602.mypinata.cloud"
+  // preferredIPFSGateway:"https://homage2024.myfilebase.com"
   // preferredIPFSGateway:"https://ipfs.filebase.io/ipfs/"
 }
 
