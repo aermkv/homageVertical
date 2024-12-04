@@ -1066,11 +1066,11 @@ function setup() {
   }
 
   if (comp.name !== 'stillLife'){
-    standardLayer1()
-    standardLayer2()
+    // standardLayer1()
+    // standardLayer2()
   }else{
-    stillLifeLayer1()
-    stillLifeLayer2()
+    // stillLifeLayer1()
+    // stillLifeLayer2()
   }
 }
 
