@@ -1277,19 +1277,21 @@ function standard(comp,theme,ovTex,hasBlackRose) {
   }
 
   for (let i = 0; i < textureAssets.length; i++) {
-    let pElPos = createVector(rnd(-w(.35),w(.35)),rnd(h(comp.texture.minY),h(comp.texture.maxY)))
+    // let pElPos = createVector(rnd(-w(.35),w(.35)),rnd(h(comp.texture.minY),h(comp.texture.maxY)))
+    let pElPos = createVector(rnd(w(.05),w(.95)),rnd(h(.05),h(.95)));
+    stSizeAdjust = 1;
     let imgId = textureAssetIds[i]
     let imgDiv = rnd(minD,maxD)/3
 
-    if (comp.name === 'standard') {
-      stSizeAdjust = map(pElPos.y,h(comp.texture.minY),h(comp.texture.maxY),1,1.7);
-    }else if(comp.name === 'dominant'){
-      stSizeAdjust = map(dist(pElPos.x,pElPos.y,domPos.x,domPos.y),0,w(1.2),1.8,.6);
-    }else if(comp.name === 'lowDensity'){
-      stSizeAdjust = map(pElPos.y,h(comp.texture.minY),h(comp.texture.maxY),1,1.5);
-    }else{
-      stSizeAdjust = 1;
-    }
+    // if (comp.name === 'standard') {
+    //   stSizeAdjust = map(pElPos.y,h(comp.texture.minY),h(comp.texture.maxY),1,1.7);
+    // }else if(comp.name === 'dominant'){
+    //   stSizeAdjust = map(dist(pElPos.x,pElPos.y,domPos.x,domPos.y),0,w(1.2),1.8,.6);
+    // }else if(comp.name === 'lowDensity'){
+    //   stSizeAdjust = map(pElPos.y,h(comp.texture.minY),h(comp.texture.maxY),1,1.5);
+    // }else{
+    //   stSizeAdjust = 1;
+    // }
 
     if (theme.name === 'allWhite') {
       bMode = BLEND
@@ -1309,18 +1311,19 @@ function standard(comp,theme,ovTex,hasBlackRose) {
 
   for (let i = 0; i < paintLGAssets.length; i++) {
     let pElPos = createVector(rnd(-w(.48),w(.48)),rnd(h(comp.paintLG.minY),h(comp.paintLG.maxY)))
+    stSizeAdjust = 1;
     let imgId = paintLGAssetIds[i]
     let imgDiv = rnd(minD,maxD)/4
 
-    if (comp.name === 'standard') {
-      stSizeAdjust = map(pElPos.y,h(comp.paintLG.minY),h(comp.paintLG.maxY),1,1.7);
-    }else if(comp.name === 'dominant'){
-      stSizeAdjust = map(dist(pElPos.x,pElPos.y,domPos.x,domPos.y),0,w(1.2),1.2,.8);
-    }else if(comp.name === 'lowDensity'){
-      stSizeAdjust = map(dist(pElPos.x,pElPos.y,domPos.x,domPos.y),0,w(1.2),1.15,.85);
-    }else{
-      stSizeAdjust = 1;
-    }
+    // if (comp.name === 'standard') {
+    //   stSizeAdjust = map(pElPos.y,h(comp.paintLG.minY),h(comp.paintLG.maxY),1,1.7);
+    // }else if(comp.name === 'dominant'){
+    //   stSizeAdjust = map(dist(pElPos.x,pElPos.y,domPos.x,domPos.y),0,w(1.2),1.2,.8);
+    // }else if(comp.name === 'lowDensity'){
+    //   stSizeAdjust = map(dist(pElPos.x,pElPos.y,domPos.x,domPos.y),0,w(1.2),1.15,.85);
+    // }else{
+    //   stSizeAdjust = 1;
+    // }
 
     let bMode = BLEND
     blendMode(bMode)
@@ -1338,7 +1341,8 @@ function standard(comp,theme,ovTex,hasBlackRose) {
   //console.log(paintAssets.length, paintArraysplit)
 
   for (let i = 0; i < paintAssets.length; i++) {
-    let pElPos = createVector(rnd(-w(.48),w(.48)),rnd(h(comp.paint.minY),h(comp.paint.maxY)))
+    // let pElPos = createVector(rnd(-w(.48),w(.48)),rnd(h(comp.paint.minY),h(comp.paint.maxY)))
+    let pElPos = createVector(rnd(w(.05),w(.95)),rnd(h(.05),h(.95)))
     let imgId = paintAssetIds[i]
     let imgDiv = rnd(minD,maxD)/2//*2
 
