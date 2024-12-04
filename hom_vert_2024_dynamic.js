@@ -2162,7 +2162,7 @@ class PlaceAsset {
     graphics.image(this.imgId,loc.x,loc.y,this.w*brr,this.h*brr)
   }
   addToArray() {
-    orderedDraw.push([this.imgId,this.pos.x,this.pos.y,this.w,this.h])
+    orderedDraw.push([this.imgId,this.pos.x+width/2,this.pos.y+height/2,this.w,this.h])
   }
 }
 
