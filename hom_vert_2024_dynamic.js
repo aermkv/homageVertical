@@ -649,15 +649,6 @@ const directory = gateway + '/' + hostType + '/' + content;
 //   }
 // }
 
-let new = {
-  rococo: 'rococo',
-  allWhite: 'allWhite',
-  digital: 'digital',
-  countryGarden: 'countryGarden',
-  neon: 'neon',
-  graphic: 'graphic'
-}
-
 const themes = {
   cmyk: {
     name: 'cmyk',
