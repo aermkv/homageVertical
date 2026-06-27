@@ -209,7 +209,655 @@ const hostType  = depData.externalAssetDependencies[0].dependency_type;
 const directory = gateway + '/' + hostType + '/' + content;
 
 
+// const themes = {
+//   rococo: {
+//     name: 'rococo',
+//     bgColors: {
+//       bgCol1: [200,222,252],
+//       bgCol2: [252,195,203],
+//       bgCol2: [255,255,212],
+//       bgCol4: [245,227,130]
+//     },
+//     flowers_B: {
+//       fileLocation: directory + '/_rococo/flowers_B',
+//       num: 9,
+//       maxNum: 32
+//     },
+//     flowers_F: {
+//       fileLocation: directory + '/_rococo/flowers_F',
+//       num: 20,
+//       maxNum: 60
+//     },
+//     flowers: {
+//       fileLocation: directory + '/_rococo/flowers',
+//       num: 10,
+//       maxNum: 12
+//     },
+//     bigFlowers: {
+//       fileLocation: directory + '/_rococo/bigFlowers',
+//       num: 1,
+//       maxNum: 9
+//     },
+//     paint: {
+//       fileLocation: directory + '/_rococo/paint',
+//       num: 6,
+//       maxNum: 14
+//     },
+//     paintLG: {
+//       fileLocation: directory + '/_rococo/paintLG',
+//       num: 4,
+//       maxNum: 9
+//     },
+//     texture: {
+//       fileLocation: directory + '/_rococo/textures',
+//       num: 4,
+//       maxNum: 14
+//     },
+//     fullTexture: {
+//       fileLocation: directory + '/_rococo/fullTextures',
+//       maxNum: 36
+//     },
+//     floor: {
+//       fileLocation: directory + '/_rococo/floors',
+//       num: 1,
+//       maxNum: 12
+//     },
+//     vase: {
+//       fileLocation: directory + '/_rococo/vases',
+//       num: 1,
+//       maxNum: 13
+//     },
+//     // vaseFlowers: {
+//     //   fileLocation: '/_rococo/vaseFlowers',
+//     //   num: 4,
+//     //   maxNum: 5
+//     // },
+//     vaseFlowersB: {
+//       fileLocation: directory + '/_rococo/vaseFlowers/_B',
+//       num: 1,
+//       maxNum: 10
+//     },
+//     vaseFlowersF: {
+//       fileLocation: directory + '/_rococo/vaseFlowers/_F',
+//       num: 2,
+//       maxNum: 14
+//     },
+//     colors: {
+//       a: [200,222,252],
+//       b: [251,234,236],
+//       c: [254,255,235],
+//       d: [245,227,130]
+//     }
+//   },
+
+//   countryGarden: {
+//     name: 'countryGarden',
+//     bgColors: {
+//       bgCol1: [242,231,227],
+//       bgCol2: [224,203,166],
+//       bgCol2: [138,133,105],
+//       bgCol4: [187,180,193]
+//     },
+//     flowers_B: {
+//       fileLocation: directory + '/_countryGarden/flowers_B',
+//       num: 9,
+//       maxNum: 50
+//     },
+//     flowers_F: {
+//       fileLocation: directory + '/_countryGarden/flowers_F',
+//       num: 20,
+//       maxNum: 48
+//     },
+//     bigFlowers: {
+//       fileLocation: directory + '/_countryGarden/bigFlowers',
+//       num: 1,
+//       maxNum: 4
+//     },
+//     paint: {
+//       fileLocation: directory + '/_countryGarden/paint',
+//       num: 10,
+//       maxNum: 34
+//     },
+//     paintLG: {
+//       fileLocation: directory + '/_countryGarden/paintLG',
+//       num: 5,
+//       maxNum: 12
+//     },
+//     texture: {
+//       fileLocation: directory + '/_countryGarden/textures',
+//       num: 6,
+//       maxNum: 15
+//     },
+//     fullTexture: {
+//       fileLocation: directory + '/_countryGarden/fullTextures',
+//       maxNum: 12
+//     },
+//     floor: {
+//       fileLocation: directory + '/_countryGarden/floors',
+//       num: 1,
+//       maxNum: 5
+//     },
+//     vase: {
+//       fileLocation: directory + '/_countryGarden/vases',
+//       num: 1,
+//       maxNum: 13
+//     },
+//     // vaseFlowers: {
+//     //   fileLocation: '/_countryGarden/vaseFlowers',
+//     //   num: 4,
+//     //   maxNum: 6
+//     // },
+//     vaseFlowersB: {
+//       fileLocation: directory + '/_countryGarden/vaseFlowers/_B',
+//       num: 1,
+//       maxNum: 7
+//     },
+//     vaseFlowersF: {
+//       fileLocation: directory + '/_countryGarden/vaseFlowers/_F',
+//       num: 2,
+//       maxNum: 7
+//     },
+//     colors: {
+//       a: [85,113,131],
+//       b: [164,205,163],
+//       c: [216,180,227],
+//       d: [225,227,180]
+//     }
+//   },
+
+//   digital: {
+//     name: 'digital',
+//     bgColors: {
+//       bgCol1: [227,48,35],
+//       bgCol2: [0,32,237],
+//       bgCol2: [113,241,74],
+//       bgCol4: [0,0,0],
+//       bgCol5: [255,255,0]
+//     },
+//     flowers: {
+//       fileLocation: directory + '/_digital/flowers',
+//       num: 8,
+//       maxNum: 42
+//     },
+//     bigFlowers: {
+//       fileLocation: directory + '/_digital/bigFlowers',
+//       num: 1,
+//       maxNum: 7
+//     },
+//     paint: {
+//       fileLocation: directory + '/_digital/paint',
+//       num: 12,
+//       maxNum: 18
+//     },
+//     paintLG: {
+//       fileLocation: directory + '/_digital/paintLG',
+//       num: 6,
+//       maxNum: 17
+//     },
+//     texture: {
+//       fileLocation: directory + '/_digital/textures',
+//       num: 4,
+//       maxNum: 17
+//     },
+//     fullTexture: {
+//       fileLocation: directory + '/_digital/fullTextures',
+//       maxNum: 21
+//     },
+//     ovTexture: {
+//       fileLocation: directory + '/_digital/overlayTextures',
+//       maxNum: 3
+//     },
+//     floor: {
+//       fileLocation: directory + '/_digital/floors',
+//       num: 1,
+//       maxNum: 6
+//     },
+//     vase: {
+//       fileLocation: directory + '/_digital/vases',
+//       num: 1,
+//       maxNum: 6
+//     },
+//     // vaseFlowers: {
+//     //   fileLocation: '/_digital/vaseFlowers',
+//     //   num: 1,
+//     //   maxNum: 2
+//     // },
+//     vaseFlowersB: {
+//       fileLocation: directory + '/_digital/vaseFlowers/_B',
+//       num: 1,
+//       maxNum: 5
+//     },
+//     vaseFlowersF: {
+//       fileLocation: directory + '/_digital/vaseFlowers/_F',
+//       num: 2,
+//       maxNum: 7
+//     },
+//     colors: {
+//       a: [80,59,128],
+//       b: [149,63,110],
+//       c: [219,80,119],
+//       d: [242,167,107]
+//     }
+//   },
+
+//   cmyk: {
+//     name: 'cmyk',
+//     bgColors: {
+//       bgCol1: [153,153,152],
+//       bgCol2: [237,237,237],
+//       bgCol2: [203,244,241],
+//       bgCol4: [12,68,62]
+//     },
+//     flowers: {
+//       fileLocation: directory + '/_cmyk/flowers',
+//       num: 10,
+//       maxNum: 36
+//     },
+//     bigFlowers: {
+//       fileLocation: directory + '/_cmyk/bigFlowers',
+//       num: 1,
+//       maxNum: 7
+//     },
+//     paint: {
+//       fileLocation: directory + '/_cmyk/paint',
+//       num: 12,
+//       maxNum: 51
+//     },
+//     paint2: {
+//       fileLocation: directory + '/_cmyk/paint',
+//       num: 12,
+//       maxNum: 44
+//     },
+//     paintLG: {
+//       fileLocation: directory + '/_cmyk/paintLG',
+//       num: 6,
+//       maxNum: 32
+//     },
+//     texture: {
+//       fileLocation: directory + '/_cmyk/textures',
+//       num: 4,
+//       maxNum: 17
+//     },
+//     fullTexture: {
+//       fileLocation: directory + '/_cmyk/fullTextures',
+//       maxNum: 22
+//     },
+//     floor: {
+//       fileLocation: directory + '/_cmyk/floors',
+//       num: 1,
+//       maxNum: 3
+//     },
+//     vase: {
+//       fileLocation: directory + '/_cmyk/vases',
+//       num: 1,
+//       maxNum: 5
+//     },
+//     // vaseFlowers: {
+//     //   fileLocation: '/_cmyk/vaseFlowers',
+//     //   num: 1,
+//     //   maxNum: 2
+//     // },
+//     vaseFlowersB: {
+//       fileLocation: directory + '/_cmyk/vaseFlowers/_B',
+//       num: 1,
+//       maxNum: 7
+//     },
+//     vaseFlowersF: {
+//       fileLocation: directory + '/_cmyk/vaseFlowers/_F',
+//       num: 2,
+//       maxNum: 9
+//     },
+//     colors: {
+//       a: [62,146,205],
+//       b: [187,41,106],
+//       c: [254,239,82],
+//       d: [0,0,0]
+//     }
+//   },
+
+//   allWhite: {
+//     name: 'allWhite',
+//     bgColors: {
+//       bgCol1: [255,255,255]
+//     },
+//     flowers: {
+//       fileLocation: directory + '/_allWhite/flowers',
+//       num: 20,
+//       maxNum: 38
+//     },
+//     bigFlowers: {
+//       fileLocation: directory + '/_allWhite/bigFlowers',
+//       num: 1,
+//       maxNum: 10
+//     },
+//     paint: {
+//       fileLocation: directory + '/_allWhite/paint',
+//       num: 11,
+//       maxNum: 14
+//     },
+//     paintLG: {
+//       fileLocation: directory + '/_allWhite/paintLG',
+//       num: 6,
+//       maxNum: 19
+//     },
+//     texture: {
+//       fileLocation: directory + '/_allWhite/textures',
+//       num: 4,
+//       maxNum: 10
+//     },
+//     fullTexture: {
+//       fileLocation: directory + '/_allWhite/fullTextures',
+//       maxNum: 13
+//     },
+//     floor: {
+//       fileLocation: directory + '/_allWhite/floors',
+//       num: 1,
+//       maxNum: 5
+//     },
+//     vase: {
+//       fileLocation: directory + '/_allWhite/vases',
+//       num: 1,
+//       maxNum: 8
+//     },
+//     // vaseFlowers: {
+//     //   fileLocation: '/_allWhite/vaseFlowers',
+//     //   num: 1,
+//     //   maxNum: 2
+//     // },
+//     vaseFlowersB: {
+//       fileLocation: directory + '/_allWhite/vaseFlowers/_B',
+//       num: 1,
+//       maxNum: 4
+//     },
+//     vaseFlowersF: {
+//       fileLocation: directory + '/_allWhite/vaseFlowers/_F',
+//       num: 2,
+//       maxNum: 10
+//     },
+//     colors: {
+//       a: [255,255,255],
+//       b: [235,215,215],
+//       c: [215,215,235]
+//     }
+//   },
+
+//   graphic: {
+//     name: 'graphic',
+//     bgColors: {
+//       bgCol1: [255,255,255]
+//     },
+//     flowers: {
+//       fileLocation: directory + '/_graphic/flowers',
+//       num: 10,
+//       maxNum: 31
+//     },
+//     bigFlowers: {
+//       fileLocation: directory + '/_graphic/bigFlowers',
+//       num: 1,
+//       maxNum: 6
+//     },
+//     paint: {
+//       fileLocation: directory + '/_graphic/paint',
+//       num: 9,
+//       maxNum: 60
+//     },
+//     paintLG: {
+//       fileLocation: directory + '/_graphic/paintLG',
+//       num: 3,
+//       maxNum: 33
+//     },
+//     texture: {
+//       fileLocation: directory + '/_graphic/textures',
+//       num: 2,
+//       maxNum: 14
+//     },
+//     fullTexture: {
+//       fileLocation: directory + '/_graphic/fullTextures',
+//       maxNum: 19
+//     },
+//     floor: {
+//       fileLocation: directory + '/_graphic/floors',
+//       num: 1,
+//       maxNum: 5
+//     },
+//     vase: {
+//       fileLocation: directory + '/_graphic/vases',
+//       num: 1,
+//       maxNum: 12
+//     },
+//     // vaseFlowers: {
+//     //   fileLocation: '/_graphic/vaseFlowers',
+//     //   num: 1,
+//     //   maxNum: 4
+//     // },
+//     vaseFlowersB: {
+//       fileLocation: directory + '/_graphic/vaseFlowers/_B',
+//       num: 1,
+//       maxNum: 9
+//     },
+//     vaseFlowersF: {
+//       fileLocation: directory + '/_graphic/vaseFlowers/_F',
+//       num: 2,
+//       maxNum: 8
+//     },
+//     colors: {
+//       a: [114,168,177],
+//       b: [233,214,192],
+//       c: [236,151,122],
+//       d: [86,84,81]
+//     }
+//   }
+// }
+
+let new = {
+  rococo: 'rococo',
+  allWhite: 'allWhite',
+  digital: 'digital',
+  countryGarden: 'countryGarden',
+  neon: 'neon',
+  graphic: 'graphic'
+}
+
 const themes = {
+  cmyk: {
+    name: 'cmyk',
+    bgColors: {
+      bgCol1: [153,153,152],
+      bgCol2: [237,237,237],
+      bgCol2: [203,244,241],
+      bgCol4: [12,68,62]
+    },
+    flowers: {
+      fileLocation: directory + '/_cmyk/flowers',
+      // num: 10,
+      num: 16,
+      maxNum: 35
+    },
+    bigFlowers: {
+      fileLocation: directory + '/_cmyk/bigFlowers',
+      num: 1,
+      maxNum: 7
+    },
+    paint: {
+      fileLocation: directory + '/_cmyk/paint',
+      // num: 12,
+      num: 18,
+      maxNum: 51
+    },
+    paint2: {
+      fileLocation: directory + '/_cmyk/paint',
+      num: 12,
+      maxNum: 44
+    },
+    paintLG: {
+      fileLocation: directory + '/_cmyk/paintLG',
+      num: 7,
+      maxNum: 32
+    },
+    texture: {
+      fileLocation: directory + '/_cmyk/textures',
+      num: 5,
+      maxNum: 18
+    },
+    fullTexture: {
+      fileLocation: directory + '/_cmyk/fullTextures',
+      maxNum: 22
+    },
+    floor: {
+      fileLocation: directory + '/_cmyk/floors',
+      num: 1,
+      maxNum: 3
+    },
+    vase: {
+      fileLocation: directory + '/_cmyk/vases',
+      num: 1,
+      maxNum: 5
+    },
+    vaseFlowersB: {
+      fileLocation: directory + '/_cmyk/vaseFlowers/_B',
+      num: 1,
+      maxNum: 7
+    },
+    vaseFlowersF: {
+      fileLocation: directory + '/_cmyk/vaseFlowers/_F',
+      num: 2,
+      maxNum: 9
+    },
+    colors: {
+      a: [62,146,205],
+      b: [187,41,106],
+      c: [254,239,82],
+      d: [0,0,0]
+    }
+  },
+
+  allWhite: {
+    name: 'allWhite',
+    bgColors: {
+      bgCol1: [255,255,255]
+    },
+    flowers: {
+      fileLocation: directory + '/_allWhite/flowers',
+      // num: 20,
+      num: 28,
+      maxNum: 40
+    },
+    bigFlowers: {
+      fileLocation: directory + '/_allWhite/bigFlowers',
+      num: 1,
+      maxNum: 10
+    },
+    paint: {
+      fileLocation: directory + '/_allWhite/paint',
+      // num: 11,
+      num: 13,
+      maxNum: 14
+    },
+    paintLG: {
+      fileLocation: directory + '/_allWhite/paintLG',
+      num: 7,
+      maxNum: 21
+    },
+    texture: {
+      fileLocation: directory + '/_allWhite/textures',
+      num: 5,
+      maxNum: 10
+    },
+    fullTexture: {
+      fileLocation: directory + '/_allWhite/fullTextures',
+      maxNum: 13
+    },
+    floor: {
+      fileLocation: directory + '/_allWhite/floors',
+      num: 1,
+      maxNum: 5
+    },
+    vase: {
+      fileLocation: directory + '/_allWhite/vases',
+      num: 1,
+      maxNum: 8
+    },
+    vaseFlowersB: {
+      fileLocation: directory + '/_allWhite/vaseFlowers/_B',
+      num: 1,
+      maxNum: 4
+    },
+    vaseFlowersF: {
+      fileLocation: directory + '/_allWhite/vaseFlowers/_F',
+      num: 2,
+      maxNum: 10
+    },
+    colors: {
+      a: [255,255,255],
+      b: [235,215,215],
+      c: [215,215,235]
+    }
+  },
+
+  graphic: {
+    name: 'graphic',
+    bgColors: {
+      bgCol1: [255,255,255]
+    },
+    flowers: {
+      fileLocation: directory + '/_graphic/flowers',
+      // num: 10,
+      num: 17,
+      maxNum: 31
+    },
+    bigFlowers: {
+      fileLocation: directory + '/_graphic/bigFlowers',
+      num: 1,
+      maxNum: 6
+    },
+    paint: {
+      fileLocation: directory + '/_graphic/paint',
+      // num: 9,
+      num: 16,
+      maxNum: 60
+    },
+    paintLG: {
+      fileLocation: directory + '/_graphic/paintLG',
+      num: 6,
+      maxNum: 33
+    },
+    texture: {
+      fileLocation: directory + '/_graphic/textures',
+      num: 4,
+      maxNum: 16
+    },
+    fullTexture: {
+      fileLocation: directory + '/_graphic/fullTextures',
+      maxNum: 19
+    },
+    floor: {
+      fileLocation: directory + '/_graphic/floors',
+      num: 1,
+      maxNum: 5
+    },
+    vase: {
+      fileLocation: directory + '/_graphic/vases',
+      num: 1,
+      maxNum: 12
+    },
+    vaseFlowersB: {
+      fileLocation: directory + '/_graphic/vaseFlowers/_B',
+      num: 1,
+      maxNum: 9
+    },
+    vaseFlowersF: {
+      fileLocation: directory + '/_graphic/vaseFlowers/_F',
+      num: 2,
+      maxNum: 8
+    },
+    colors: {
+      a: [114,168,177],
+      b: [233,214,192],
+      c: [236,151,122],
+      d: [86,84,81]
+    }
+  },
+
   rococo: {
     name: 'rococo',
     bgColors: {
@@ -267,11 +915,6 @@ const themes = {
       num: 1,
       maxNum: 13
     },
-    // vaseFlowers: {
-    //   fileLocation: '/_rococo/vaseFlowers',
-    //   num: 4,
-    //   maxNum: 5
-    // },
     vaseFlowersB: {
       fileLocation: directory + '/_rococo/vaseFlowers/_B',
       num: 1,
@@ -289,364 +932,6 @@ const themes = {
       d: [245,227,130]
     }
   },
-
-  countryGarden: {
-    name: 'countryGarden',
-    bgColors: {
-      bgCol1: [242,231,227],
-      bgCol2: [224,203,166],
-      bgCol2: [138,133,105],
-      bgCol4: [187,180,193]
-    },
-    flowers_B: {
-      fileLocation: directory + '/_countryGarden/flowers_B',
-      num: 9,
-      maxNum: 50
-    },
-    flowers_F: {
-      fileLocation: directory + '/_countryGarden/flowers_F',
-      num: 20,
-      maxNum: 48
-    },
-    bigFlowers: {
-      fileLocation: directory + '/_countryGarden/bigFlowers',
-      num: 1,
-      maxNum: 4
-    },
-    paint: {
-      fileLocation: directory + '/_countryGarden/paint',
-      num: 10,
-      maxNum: 34
-    },
-    paintLG: {
-      fileLocation: directory + '/_countryGarden/paintLG',
-      num: 5,
-      maxNum: 12
-    },
-    texture: {
-      fileLocation: directory + '/_countryGarden/textures',
-      num: 6,
-      maxNum: 15
-    },
-    fullTexture: {
-      fileLocation: directory + '/_countryGarden/fullTextures',
-      maxNum: 12
-    },
-    floor: {
-      fileLocation: directory + '/_countryGarden/floors',
-      num: 1,
-      maxNum: 5
-    },
-    vase: {
-      fileLocation: directory + '/_countryGarden/vases',
-      num: 1,
-      maxNum: 13
-    },
-    // vaseFlowers: {
-    //   fileLocation: '/_countryGarden/vaseFlowers',
-    //   num: 4,
-    //   maxNum: 6
-    // },
-    vaseFlowersB: {
-      fileLocation: directory + '/_countryGarden/vaseFlowers/_B',
-      num: 1,
-      maxNum: 7
-    },
-    vaseFlowersF: {
-      fileLocation: directory + '/_countryGarden/vaseFlowers/_F',
-      num: 2,
-      maxNum: 7
-    },
-    colors: {
-      a: [85,113,131],
-      b: [164,205,163],
-      c: [216,180,227],
-      d: [225,227,180]
-    }
-  },
-
-  digital: {
-    name: 'digital',
-    bgColors: {
-      bgCol1: [227,48,35],
-      bgCol2: [0,32,237],
-      bgCol2: [113,241,74],
-      bgCol4: [0,0,0],
-      bgCol5: [255,255,0]
-    },
-    flowers: {
-      fileLocation: directory + '/_digital/flowers',
-      num: 8,
-      maxNum: 42
-    },
-    bigFlowers: {
-      fileLocation: directory + '/_digital/bigFlowers',
-      num: 1,
-      maxNum: 7
-    },
-    paint: {
-      fileLocation: directory + '/_digital/paint',
-      num: 12,
-      maxNum: 18
-    },
-    paintLG: {
-      fileLocation: directory + '/_digital/paintLG',
-      num: 6,
-      maxNum: 17
-    },
-    texture: {
-      fileLocation: directory + '/_digital/textures',
-      num: 4,
-      maxNum: 17
-    },
-    fullTexture: {
-      fileLocation: directory + '/_digital/fullTextures',
-      maxNum: 21
-    },
-    ovTexture: {
-      fileLocation: directory + '/_digital/overlayTextures',
-      maxNum: 3
-    },
-    floor: {
-      fileLocation: directory + '/_digital/floors',
-      num: 1,
-      maxNum: 6
-    },
-    vase: {
-      fileLocation: directory + '/_digital/vases',
-      num: 1,
-      maxNum: 6
-    },
-    // vaseFlowers: {
-    //   fileLocation: '/_digital/vaseFlowers',
-    //   num: 1,
-    //   maxNum: 2
-    // },
-    vaseFlowersB: {
-      fileLocation: directory + '/_digital/vaseFlowers/_B',
-      num: 1,
-      maxNum: 5
-    },
-    vaseFlowersF: {
-      fileLocation: directory + '/_digital/vaseFlowers/_F',
-      num: 2,
-      maxNum: 7
-    },
-    colors: {
-      a: [80,59,128],
-      b: [149,63,110],
-      c: [219,80,119],
-      d: [242,167,107]
-    }
-  },
-
-  cmyk: {
-    name: 'cmyk',
-    bgColors: {
-      bgCol1: [153,153,152],
-      bgCol2: [237,237,237],
-      bgCol2: [203,244,241],
-      bgCol4: [12,68,62]
-    },
-    flowers: {
-      fileLocation: directory + '/_cmyk/flowers',
-      num: 10,
-      maxNum: 36
-    },
-    bigFlowers: {
-      fileLocation: directory + '/_cmyk/bigFlowers',
-      num: 1,
-      maxNum: 7
-    },
-    paint: {
-      fileLocation: directory + '/_cmyk/paint',
-      num: 12,
-      maxNum: 51
-    },
-    paint2: {
-      fileLocation: directory + '/_cmyk/paint',
-      num: 12,
-      maxNum: 44
-    },
-    paintLG: {
-      fileLocation: directory + '/_cmyk/paintLG',
-      num: 6,
-      maxNum: 32
-    },
-    texture: {
-      fileLocation: directory + '/_cmyk/textures',
-      num: 4,
-      maxNum: 17
-    },
-    fullTexture: {
-      fileLocation: directory + '/_cmyk/fullTextures',
-      maxNum: 22
-    },
-    floor: {
-      fileLocation: directory + '/_cmyk/floors',
-      num: 1,
-      maxNum: 3
-    },
-    vase: {
-      fileLocation: directory + '/_cmyk/vases',
-      num: 1,
-      maxNum: 5
-    },
-    // vaseFlowers: {
-    //   fileLocation: '/_cmyk/vaseFlowers',
-    //   num: 1,
-    //   maxNum: 2
-    // },
-    vaseFlowersB: {
-      fileLocation: directory + '/_cmyk/vaseFlowers/_B',
-      num: 1,
-      maxNum: 7
-    },
-    vaseFlowersF: {
-      fileLocation: directory + '/_cmyk/vaseFlowers/_F',
-      num: 2,
-      maxNum: 9
-    },
-    colors: {
-      a: [62,146,205],
-      b: [187,41,106],
-      c: [254,239,82],
-      d: [0,0,0]
-    }
-  },
-
-  allWhite: {
-    name: 'allWhite',
-    bgColors: {
-      bgCol1: [255,255,255]
-    },
-    flowers: {
-      fileLocation: directory + '/_allWhite/flowers',
-      num: 20,
-      maxNum: 38
-    },
-    bigFlowers: {
-      fileLocation: directory + '/_allWhite/bigFlowers',
-      num: 1,
-      maxNum: 10
-    },
-    paint: {
-      fileLocation: directory + '/_allWhite/paint',
-      num: 11,
-      maxNum: 14
-    },
-    paintLG: {
-      fileLocation: directory + '/_allWhite/paintLG',
-      num: 6,
-      maxNum: 19
-    },
-    texture: {
-      fileLocation: directory + '/_allWhite/textures',
-      num: 4,
-      maxNum: 10
-    },
-    fullTexture: {
-      fileLocation: directory + '/_allWhite/fullTextures',
-      maxNum: 13
-    },
-    floor: {
-      fileLocation: directory + '/_allWhite/floors',
-      num: 1,
-      maxNum: 5
-    },
-    vase: {
-      fileLocation: directory + '/_allWhite/vases',
-      num: 1,
-      maxNum: 8
-    },
-    // vaseFlowers: {
-    //   fileLocation: '/_allWhite/vaseFlowers',
-    //   num: 1,
-    //   maxNum: 2
-    // },
-    vaseFlowersB: {
-      fileLocation: directory + '/_allWhite/vaseFlowers/_B',
-      num: 1,
-      maxNum: 4
-    },
-    vaseFlowersF: {
-      fileLocation: directory + '/_allWhite/vaseFlowers/_F',
-      num: 2,
-      maxNum: 10
-    },
-    colors: {
-      a: [255,255,255],
-      b: [235,215,215],
-      c: [215,215,235]
-    }
-  },
-
-  graphic: {
-    name: 'graphic',
-    bgColors: {
-      bgCol1: [255,255,255]
-    },
-    flowers: {
-      fileLocation: directory + '/_graphic/flowers',
-      num: 10,
-      maxNum: 31
-    },
-    bigFlowers: {
-      fileLocation: directory + '/_graphic/bigFlowers',
-      num: 1,
-      maxNum: 6
-    },
-    paint: {
-      fileLocation: directory + '/_graphic/paint',
-      num: 9,
-      maxNum: 60
-    },
-    paintLG: {
-      fileLocation: directory + '/_graphic/paintLG',
-      num: 3,
-      maxNum: 33
-    },
-    texture: {
-      fileLocation: directory + '/_graphic/textures',
-      num: 2,
-      maxNum: 14
-    },
-    fullTexture: {
-      fileLocation: directory + '/_graphic/fullTextures',
-      maxNum: 19
-    },
-    floor: {
-      fileLocation: directory + '/_graphic/floors',
-      num: 1,
-      maxNum: 5
-    },
-    vase: {
-      fileLocation: directory + '/_graphic/vases',
-      num: 1,
-      maxNum: 12
-    },
-    // vaseFlowers: {
-    //   fileLocation: '/_graphic/vaseFlowers',
-    //   num: 1,
-    //   maxNum: 4
-    // },
-    vaseFlowersB: {
-      fileLocation: directory + '/_graphic/vaseFlowers/_B',
-      num: 1,
-      maxNum: 9
-    },
-    vaseFlowersF: {
-      fileLocation: directory + '/_graphic/vaseFlowers/_F',
-      num: 2,
-      maxNum: 8
-    },
-    colors: {
-      a: [114,168,177],
-      b: [233,214,192],
-      c: [236,151,122],
-      d: [86,84,81]
-    }
-  }
 }
 
 const comps = {
@@ -2085,24 +2370,24 @@ function chooseObjKey(obj) {
 }
 
 function chooseTheme() {
-  // let theme = chooseObjKey(themes)
-  // return theme;
-  let tV = map(decPairs[1],0,255,0,1);
-  console.log(tV)
-  if (tV < .32) {
-    theme = themes.rococo
-  }else if (tV < .54) {
-    theme = themes.countryGarden
-  }else if (tV < .72) {
-    theme = themes.digital
-  }else if (tV < .85){
-    theme = themes.cmyk
-  }else if (tV < .95){
-    theme = themes.graphic
-  }else{
-    theme = themes.allWhite
-  }
+  let theme = chooseObjKey(themes)
   return theme;
+  // let tV = map(decPairs[1],0,255,0,1);
+  // console.log(tV)
+  // if (tV < .32) {
+  //   theme = themes.rococo
+  // }else if (tV < .54) {
+  //   theme = themes.countryGarden
+  // }else if (tV < .72) {
+  //   theme = themes.digital
+  // }else if (tV < .85){
+  //   theme = themes.cmyk
+  // }else if (tV < .95){
+  //   theme = themes.graphic
+  // }else{
+  //   theme = themes.allWhite
+  // }
+  // return theme;
 }
 
 function chooseComp() {
