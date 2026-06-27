@@ -179,14 +179,18 @@ const depData = {
     // cid: "bafybeiesua62ncqyb65gjm2kgna4xcrrr7sdufcdejyentytdky2k2q4q4",
 		  
     // updated filebase cid 11/12/2024
-    cid: "bafybeifv2xbtwzji755hqfgodxbs5c3b7vaoudkq6mvhs6gq5dcpekih5e",
+    //cid: "bafybeifv2xbtwzji755hqfgodxbs5c3b7vaoudkq6mvhs6gq5dcpekih5e",
+		  
+	// updated filebase cid 6/25/2026:
+    cid: "Qmdaf2sCBuWY5jJzXftMU1i3BcdSTih7K71eQCv9xQHwaL",
 	
 		dependency_type: "ipfs"
 	  },
 	],
   // preferredIPFSGateway:"https://black-indirect-dragon-602.mypinata.cloud"
-  preferredIPFSGateway:"https://homage2024.myfilebase.com"
+  // preferredIPFSGateway:"https://homage2024.myfilebase.com"
   // preferredIPFSGateway:"https://ipfs.filebase.io/ipfs/"
+  preferredIPFSGateway: "https://crucial-sapphire-mammal.myfilebase.com"
 	
 }
 
