@@ -1,4 +1,4 @@
-//const hash = 'a43754a07900e03d83d2227a96b3f9d5570ef42e0fae86c84b3efb05c9cf46be'
+const hash = '8ada00a5b9abee04f8ed855ca598904639a271022cd4da6dbbf344afa06f04da'
 
 const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 const charLength = chars.length;
@@ -1035,10 +1035,10 @@ function preload() {
   }
   overTopLoad(numOverTop)
 
-  hasBlackRose = map(decPairs[6],0,255,0,1);
-  if (hasBlackRose < .03) {
-    blackRoseLoad()
-  }
+  // hasBlackRose = map(decPairs[6],0,255,0,1);
+  // if (hasBlackRose < .03) {
+  //   blackRoseLoad()
+  // }
 
   // console.log(comp.name + '  ////  ' + theme.name + '  ////  ' + numSocials + '  ////  ' + numOverTop + '  ////  ' + numButts)
 }
